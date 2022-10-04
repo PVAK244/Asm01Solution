@@ -1,0 +1,33 @@
+﻿<Window x:Class="SalesWPFApp.WindowLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalesWPFApp"
+        mc:Ignorable="d"
+        Title="Login" Height="350" Width="700" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="lbEmail" Foreground="Black" FontSize="20" Content="Email" Width="140" />
+                    <TextBox x:Name="txtEmail" Height="25" Width="300" MouseEnter="txtEmail_MouseEnter" MouseLeave="txtEmail_MouseLeave" Text="admin@fstore.com" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="lbPassword" Foreground="Black" FontSize="20" Content="Password" Width="140"  />
+                    <PasswordBox x:Name="txtPassword" PasswordChar="*" Height="25" Width="300" MouseEnter="txtPassword_MouseEnter" MouseLeave="txtPassword_MouseLeave" Password="admin@@" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="lbMessage" Foreground="Red" FontSize="20" Width="440" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <Button x:Name="Login" Height="40" Width="100" Content="Login" FontSize="20" Margin="50" Click="Login_Click"/>
+                    <Button x:Name="Clear" Height="40" Width="100" Content="Clear" FontSize="20" Margin="50" Click="Clear_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+        <DockPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+            <StatusBarItem Name="status" FontSize="20"></StatusBarItem>
+        </DockPanel>
+    </Grid>
+</Window>
