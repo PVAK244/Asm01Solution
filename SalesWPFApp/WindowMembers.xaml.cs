@@ -22,7 +22,6 @@ namespace SalesWPFApp
     /// </summary>
     public partial class WindowMembers : Window
     {
-        public bool FrmMemberState { get; set; }
         public bool isPermit { get; set; }
         public int AccountID { get; set; }
 

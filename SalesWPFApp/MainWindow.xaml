@@ -11,8 +11,8 @@
             <Menu>
                 <MenuItem Header="Management">
                     <MenuItem x:Name="memberManagement" Header="Member Management" Click="memberManagement_Click"/>
-                    <MenuItem x:Name="productManagement" Header="Product Management"/>
-                    <MenuItem x:Name="orderManagement" Header="Order Management"/>
+                    <MenuItem x:Name="productManagement" Header="Product Management" Click="productManagement_Click" />
+                    <MenuItem x:Name="orderManagement" Header="Order Management" Click="orderManagement_Click"/>
                 </MenuItem>
             </Menu>
         </StackPanel>

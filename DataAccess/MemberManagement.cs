@@ -76,7 +76,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.InnerException.Message);
+                throw new Exception(ex.Message);
             }
         }
 

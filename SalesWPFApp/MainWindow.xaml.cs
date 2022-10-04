@@ -21,6 +21,8 @@ namespace SalesWPFApp
     public partial class MainWindow : Window
     {
         private static WindowMembers? frmMember;
+        private static WindowOrders? frmOrders;
+        private static WindowProducts? frmProducts;
 
         public bool IsAdmin { get; set; }
         public int AccountID { get; set; }
@@ -32,11 +34,20 @@ namespace SalesWPFApp
 
         private void memberManagement_Click(object sender, RoutedEventArgs e)
         {
-            if (frmMember == null || frmMember.FrmMemberState == false)
-            {
-                frmMember = new WindowMembers { FrmMemberState = true, isPermit = IsAdmin, AccountID = AccountID };
+                frmMember = new WindowMembers { isPermit = IsAdmin, AccountID = AccountID };
                 frmMember.Show();
-            }
+        }
+
+        private void orderManagement_Click(object sender, RoutedEventArgs e)
+        {
+            frmOrders = new WindowOrders { isPermit = IsAdmin };
+            frmOrders.Show();
+        }
+
+        private void productManagement_Click(object sender, RoutedEventArgs e)
+        {
+            frmProducts = new WindowProducts { isPermit = IsAdmin };
+            frmProducts.Show();
         }
     }
 }
